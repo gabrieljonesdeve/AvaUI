@@ -8,14 +8,14 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Fira Code', monospace;
-            font-family: 'Arial', sans-serif; /* Puoi cambiare il font qui */
+            font-family: 'Fira Code', monospace; /* Usa solo Fira Code per la famiglia di font */
         }
-                .hero-slim {
+
+        .hero-slim {
             background-color: #8f00ff; /* Colore di sfondo */
             color: black;
             padding: 10px 20px; /* Spazio interno ridotto */
-            position: relative;
+            text-align: center; /* Centra il testo */
         }
 
         .header {
@@ -27,6 +27,7 @@
             background-position: center; /* Centra l'immagine */
             position: relative; /* Posizione relativa per il contenuto */
         }
+
         .header-content {
             position: absolute;
             bottom: 20px; /* Distanza dal fondo */
@@ -34,44 +35,50 @@
             text-align: center;
             color: white; /* Colore del testo */
         }
+
         .header-content .name {
             font-size: 2.5em; /* Dimensione del testo */
             margin: 0;
         }
+
         .header-content .links {
             position: absolute;
             top: 20px;
             right: 20px;
         }
+
         .header-content .links a {
             color: white; /* Colore dei link */
             text-decoration: none;
             margin-left: 15px; /* Spazio tra i link */
             font-size: 1.2em; /* Dimensione dei link */
         }
+
         /* CSS per impedire il download dell'immagine */
         .header img {
             display: none; /* Nasconde l'immagine per evitare il download */
         }
 
-                .container {
-          width: 80%; /* Imposta la larghezza del container al 80% della larghezza del viewport */
-          max-width: 1200px; /* Imposta una larghezza massima per il container */
-          margin: 0 auto; /* Centra il container orizzontalmente */
-          padding: 20px; /* Aggiunge dello spazio interno (padding) di 20px */
-          box-sizing: border-box; /* Include padding e border nel calcolo della larghezza totale */
+        .container {
+            width: 80%; /* Imposta la larghezza del container al 80% della larghezza del viewport */
+            max-width: 1200px; /* Imposta una larghezza massima per il container */
+            margin: 0 auto; /* Centra il container orizzontalmente */
+            padding: 20px; /* Aggiunge dello spazio interno (padding) di 20px */
+            box-sizing: border-box; /* Include padding e border nel calcolo della larghezza totale */
         }
 
-                .code-container {
+        .code-container {
             position: relative;
             margin: 20px 0;
         }
+
         .code-container pre {
             background-color: #f5f5f5;
             padding: 10px;
             border-radius: 5px;
             overflow: auto;
         }
+
         .copy-btn {
             position: absolute;
             top: 10px;
@@ -89,40 +96,36 @@
     <div class="hero-slim">
         <b>GATA - Gabriel Arena Tech Area</b>
     </div>
+
     <header class="header">
         <div class="header-content">
             <h1 class="name">AvaUI - Gata2024</h1>
+            <div class="links">
+                <!-- Aggiungi i tuoi link qui -->
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </header>
-        <div class="#About AvaUI">
-            <div class="container">
-<section id="avaui-intro">
-    <h1>Benvenuti in AvaUI</h1>
-    <p>AvaUI è il framework front-end innovativo progettato per rivoluzionare il design dei siti web. Nato da GATA 2024 (GJD) per i siti gjd, AvaUI combina la potenza e la flessibilità di Bootstrap con un tocco unico di estetica e usabilità.</p>
-    <h2>Caratteristiche principali:</h2>
-    <ul>
-        <li><strong>Design Responsivo:</strong> Adatta il tuo sito a qualsiasi dispositivo con un layout impeccabile.</li>
-        <li><strong>Componenti Personalizzabili:</strong> Crea e modifica facilmente componenti per soddisfare le tue esigenze.</li>
-        <li><strong>Interfaccia Intuitiva:</strong> Semplifica il processo di sviluppo con una sintassi chiara e diretta.</li>
-        <li><strong>Temi e Varianti:</strong> Personalizza l’aspetto del tuo sito con una varietà di temi e stili.</li>
-        <li><strong>Compatibilità Bootstrap:</strong> Integra facilmente AvaUI con progetti esistenti che utilizzano Bootstrap.</li>
-    </ul>
-    <p>AvaUI offre tutto ciò di cui hai bisogno per costruire esperienze web eccezionali, mantenendo al tempo stesso la semplicità e la versatilità. Scopri un nuovo modo di progettare con AvaUI.</p>
-</section>
-            </div>
 
-
-
-
-
-
-
-            <div class="container">
+    <div class="container">
+        <section id="avaui-intro">
+            <h1>Benvenuti in AvaUI</h1>
+            <p>AvaUI è il framework front-end innovativo progettato per rivoluzionare il design dei siti web. Nato da GATA 2024 (GJD) per i siti gjd, AvaUI combina la potenza e la flessibilità di Bootstrap con un tocco unico di estetica e usabilità.</p>
+            <h2>Caratteristiche principali:</h2>
+            <ul>
+                <li><strong>Design Responsivo:</strong> Adatta il tuo sito a qualsiasi dispositivo con un layout impeccabile.</li>
+                <li><strong>Componenti Personalizzabili:</strong> Crea e modifica facilmente componenti per soddisfare le tue esigenze.</li>
+                <li><strong>Interfaccia Intuitiva:</strong> Semplifica il processo di sviluppo con una sintassi chiara e diretta.</li>
+                <li><strong>Temi e Varianti:</strong> Personalizza l’aspetto del tuo sito con una varietà di temi e stili.</li>
+                <li><strong>Compatibilità Bootstrap:</strong> Integra facilmente AvaUI con progetti esistenti che utilizzano Bootstrap.</li>
+            </ul>
+            <p>AvaUI offre tutto ciò di cui hai bisogno per costruire esperienze web eccezionali, mantenendo al tempo stesso la semplicità e la versatilità. Scopri un nuovo modo di progettare con AvaUI.</p>
+        </section>
 
         <div class="code-container">
-        <button class="copy-btn" onclick="copyCode()">Copia</button>
-        <pre id="code">
+            <button class="copy-btn" onclick="copyCode()">Copia</button>
+            <pre id="code">
 <code>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,19 +143,12 @@
 </body>
 </html>
 </code>
-        </pre>
+            </pre>
+        </div>
     </div>
 
-        </div>
-
-
-
-
-
-
-    
     <script>
-            function copyCode() {
+        function copyCode() {
             const codeElement = document.getElementById('code');
             const range = document.createRange();
             range.selectNode(codeElement);
@@ -161,7 +157,9 @@
             document.execCommand('copy');
             window.getSelection().removeAllRanges();
             alert('Codice copiato negli appunti!');
-        }    // Disabilita il click destro sull'intero documento
+        }
+
+        // Disabilita il click destro sull'intero documento
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
