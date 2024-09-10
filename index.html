@@ -54,24 +54,38 @@
         .header img {
             display: none; /* Nasconde l'immagine per evitare il download */
         }
+
+                .container {
+          width: 80%; /* Imposta la larghezza del container al 80% della larghezza del viewport */
+          max-width: 1200px; /* Imposta una larghezza massima per il container */
+          margin: 0 auto; /* Centra il container orizzontalmente */
+          padding: 20px; /* Aggiunge dello spazio interno (padding) di 20px */
+          box-sizing: border-box; /* Include padding e border nel calcolo della larghezza totale */
+        }
     </style>
 </head>
 <body>
     <div class="hero-slim">
-        GATA - Gabriel Arena Tech Area
+        <b>GATA - Gabriel Arena Tech Area</b>
     </div>
     <header class="header">
         <div class="header-content">
             <h1 class="name">Nome e Cognome</h1>
             <div class="links">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
+                <a href="#About AvaUI">About</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
-        <!-- Immagine nascosta per prevenire il download -->
-        <img src="https://lh5.googleusercontent.com/8AXJd7cWrlIGO3HumDq90LkA3QxbxNNqu0rE17PR-FkRBMNdL9PK29TYhvhT2_v-IWaiDlShg8lTWBiUvAbuxd4F5b5NKsnggfBpOD-IvCF0ctH6kxf27pkYxJPvam60Ig=w1280" alt="Header Image">
     </header>
+        <div class="About AvaUI">
+            <div class="container">
+                <h1>
+                    About AvaUI
+                </h1>
+            </div>
+        </div>
+    
     <script>
         // Disabilita il click destro sull'intero documento
         document.addEventListener('contextmenu', function(e) {
@@ -80,6 +94,3 @@
     </script>
 </body>
 </html>
-
-
-
