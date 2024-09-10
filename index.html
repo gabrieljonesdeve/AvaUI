@@ -61,6 +61,28 @@
           padding: 20px; /* Aggiunge dello spazio interno (padding) di 20px */
           box-sizing: border-box; /* Include padding e border nel calcolo della larghezza totale */
         }
+
+                .code-container {
+            position: relative;
+            margin: 20px 0;
+        }
+        .code-container pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -90,9 +112,52 @@
 </section>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+        <div class="code-container">
+        <button class="copy-btn" onclick="copyCode()">Copia</button>
+        <pre id="code">
+<code>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+</body>
+</html>
+</code>
+        </pre>
+    </div>
+
+
+
+
+
+
+
     
     <script>
-        // Disabilita il click destro sull'intero documento
+            function copyCode() {
+            const codeElement = document.getElementById('code');
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Codice copiato negli appunti!');
+        }    // Disabilita il click destro sull'intero documento
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
